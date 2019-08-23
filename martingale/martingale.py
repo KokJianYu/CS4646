@@ -51,8 +51,11 @@ def get_spin_result(win_prob):
 # 		else:
 # 		episode_winnings = episode_winnings - bet_amount
 # 		bet_amount = bet_amount * 2					  	 		  		  		    	 		 		   		 		  
-def test_code():  		   	  			  	 		  		  		    	 		 		   		 		  
-	win_prob = 0.40 # set appropriately to the probability of a win  		   	  			  	 		  		  		    	 		 		   		 		  
+def test_code():  	
+	# in america wheel, there are 38 holes, 2 green. 
+	# therefore, chance of winning given that we bet red or black
+	# is 18/38	   	  			  	 		  		  		    	 		 		   		 		  
+	win_prob = 18/38 # set appropriately to the probability of a win  		   	  			  	 		  		  		    	 		 		   		 		  
 	np.random.seed(gtid()) # do this only once
 
 	# define variables  		  
@@ -70,19 +73,30 @@ def test_code():
 
 	# Experiment 1 Figure 2
 	num_episodes = 1000
-	mean_winnings = np.zeros((1001))
 	all_winnings = np.zeros((num_episodes, 1001))
 	for episode in range(num_episodes):
 		winnings = play_episode(win_prob, num_spins)
-		mean_winnings += winnings 
 		all_winnings[episode] = winnings
-	# TODO: calculate mean and std with all_winnings
-	print(all_winnings)
-	mean_winnings /= num_episodes
+	mean_winnings = all_winnings.mean(axis=0)
+	std_winnings = all_winnings.std(axis=0)
 	plt.plot(mean_winnings)
+	plt.plot(mean_winnings + std_winnings)
+	plt.plot(mean_winnings - std_winnings)
+
 	save_plot("figure2.png")
 	plt.close()
-	#print(list(mean_winnings))
+
+	# Experiment 1 Figure 3
+	median_winnings = np.median(all_winnings, axis=0)
+	std_winnings = all_winnings.std(axis=0)
+	plt.plot(median_winnings)
+	plt.plot(median_winnings + std_winnings)
+	plt.plot(median_winnings - std_winnings)
+	save_plot("figure3.png")
+	plt.close()
+
+	# Experiment 2
+	# TODO: Might want to create a new helper function rather then editing previous one.
 
 
   		   	  			  	 		  		  		    	 		 		   		 		  
