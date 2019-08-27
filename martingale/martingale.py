@@ -40,17 +40,7 @@ def get_spin_result(win_prob):
 		result = True  		   	  			  	 		  		  		    	 		 		   		 		  
 	return result  		   	  			  	 		  		  		    	 		 		   		 		  
 
-# episode_winnings = 0
-# while episode_winnings < 80:
-# 	won = False
-# 	bet_amount = 1
-# 	while not won:
-# 		won = get_spin_result(win_prob)
-# 		if won == True:
-# 		episode_winnings = episode_winnings + bet_amount
-# 		else:
-# 		episode_winnings = episode_winnings - bet_amount
-# 		bet_amount = bet_amount * 2					  	 		  		  		    	 		 		   		 		  
+			  	 		  		  		    	 		 		   		 		  
 def test_code():  	
 	# in america wheel, there are 38 holes, 2 green. 
 	# therefore, chance of winning given that we bet red or black
@@ -68,6 +58,8 @@ def test_code():
 		winnings = play_episode(win_prob, num_spins)
 		plt.plot(winnings)
 
+	plt.xlabel("Spins")
+	plt.ylabel("Winnings")
 	save_plot("figure1.png")
 	plt.close()
 
@@ -82,23 +74,53 @@ def test_code():
 	plt.plot(mean_winnings)
 	plt.plot(mean_winnings + std_winnings)
 	plt.plot(mean_winnings - std_winnings)
-
+	plt.xlabel("Spins")
+	plt.ylabel("Winnings")
 	save_plot("figure2.png")
 	plt.close()
 
 	# Experiment 1 Figure 3
+	# utilizing all_winnings from experiment 1 figure 2
 	median_winnings = np.median(all_winnings, axis=0)
 	std_winnings = all_winnings.std(axis=0)
 	plt.plot(median_winnings)
 	plt.plot(median_winnings + std_winnings)
 	plt.plot(median_winnings - std_winnings)
+	plt.xlabel("Spins")
+	plt.ylabel("Winnings")
 	save_plot("figure3.png")
 	plt.close()
 
-	# Experiment 2
-	# TODO: Might want to create a new helper function rather then editing previous one.
+	# Experiment 2 Figure 4
+	num_episodes = 1000
+	all_winnings = np.zeros((num_episodes, 1001))
+	for episode in range(num_episodes):
+		winnings = play_episode_256_bankroll(win_prob, num_spins)
+		all_winnings[episode] = winnings
+	mean_winnings = all_winnings.mean(axis=0)
+	std_winnings = all_winnings.std(axis=0)
+	plt.plot(mean_winnings)
+	plt.plot(mean_winnings + std_winnings)
+	plt.plot(mean_winnings - std_winnings)
+	plt.xlabel("Spins")
+	plt.ylabel("Winnings")
+	save_plot("figure4.png")
+	plt.close()
 
+	# Calculate probability
+	last_spin = all_winnings[:,-1]
+	print(np.unique(last_spin, return_counts=True))
 
+	# Experiment 2 Figure 5
+	median_winnings = np.median(all_winnings, axis=0)
+	std_winnings = all_winnings.std(axis=0)
+	plt.plot(median_winnings)
+	plt.plot(median_winnings + std_winnings)
+	plt.plot(median_winnings - std_winnings)
+	plt.xlabel("Spins")
+	plt.ylabel("Winnings")
+	save_plot("figure5.png")
+	plt.close()
   		   	  			  	 		  		  		    	 		 		   		 		  
 	# add your code here to implement the experiments  		   	  			  	 		  		  		    	 		 		   		 		  
 
@@ -121,6 +143,31 @@ def play_episode(win_prob, num_spins):
 			bet = 1
 		else:
 			winnings[i+1] = winnings[i] - bet
+			bet = bet*2
+	return winnings
+
+
+def play_episode_256_bankroll(win_prob, num_spins):
+	winnings = np.zeros((1001)) # 0 is before first spin. 
+	bet = 1
+	bankroll = 256
+	# spin loop
+	for i in range(num_spins):
+		if winnings[i] >= 80 or winnings[i] <= -256:
+			winnings[(i+1):] = winnings[i] 
+			break
+
+		if bet > bankroll:
+			bet = bankroll
+
+		won = get_spin_result(win_prob)
+		if won:
+			winnings[i+1] = winnings[i] + bet
+			bankroll = bankroll + bet
+			bet = 1
+		else:
+			winnings[i+1] = winnings[i] - bet
+			bankroll = bankroll - bet
 			bet = bet*2
 	return winnings
 
