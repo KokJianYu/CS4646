@@ -56,10 +56,11 @@ def test_code():
 	# episode loop
 	for episode in range(num_episodes): 	  	
 		winnings = play_episode(win_prob, num_spins)
-		plt.plot(winnings)
-
+		plt.plot(winnings, label="simulation_{}".format(episode+1))
+	plt.title("Figure 1")
 	plt.xlabel("Spins")
 	plt.ylabel("Winnings")
+	plt.legend()
 	save_plot("figure1.png")
 	plt.close()
 
@@ -71,11 +72,13 @@ def test_code():
 		all_winnings[episode] = winnings
 	mean_winnings = all_winnings.mean(axis=0)
 	std_winnings = all_winnings.std(axis=0)
-	plt.plot(mean_winnings)
-	plt.plot(mean_winnings + std_winnings)
-	plt.plot(mean_winnings - std_winnings)
+	plt.plot(mean_winnings, label="mean")
+	plt.plot(mean_winnings + std_winnings, label="mean + std")
+	plt.plot(mean_winnings - std_winnings, label="mean - std")
+	plt.title("Figure 2")
 	plt.xlabel("Spins")
 	plt.ylabel("Winnings")
+	plt.legend()
 	save_plot("figure2.png")
 	plt.close()
 
@@ -83,11 +86,13 @@ def test_code():
 	# utilizing all_winnings from experiment 1 figure 2
 	median_winnings = np.median(all_winnings, axis=0)
 	std_winnings = all_winnings.std(axis=0)
-	plt.plot(median_winnings)
-	plt.plot(median_winnings + std_winnings)
-	plt.plot(median_winnings - std_winnings)
+	plt.plot(median_winnings, label="median")
+	plt.plot(median_winnings + std_winnings, label="median + std")
+	plt.plot(median_winnings - std_winnings, label="median - std")
+	plt.title("Figure 3")
 	plt.xlabel("Spins")
 	plt.ylabel("Winnings")
+	plt.legend()
 	save_plot("figure3.png")
 	plt.close()
 
@@ -99,26 +104,29 @@ def test_code():
 		all_winnings[episode] = winnings
 	mean_winnings = all_winnings.mean(axis=0)
 	std_winnings = all_winnings.std(axis=0)
-	plt.plot(mean_winnings)
-	plt.plot(mean_winnings + std_winnings)
-	plt.plot(mean_winnings - std_winnings)
+	plt.plot(mean_winnings, label="mean")
+	plt.plot(mean_winnings + std_winnings, label="mean + std")
+	plt.plot(mean_winnings - std_winnings, label="mean - std")
+	plt.title("Figure 4")
 	plt.xlabel("Spins")
 	plt.ylabel("Winnings")
+	plt.legend()
 	save_plot("figure4.png")
 	plt.close()
 
 	# Calculate probability
 	last_spin = all_winnings[:,-1]
-	print(np.unique(last_spin, return_counts=True))
 
 	# Experiment 2 Figure 5
 	median_winnings = np.median(all_winnings, axis=0)
 	std_winnings = all_winnings.std(axis=0)
-	plt.plot(median_winnings)
-	plt.plot(median_winnings + std_winnings)
-	plt.plot(median_winnings - std_winnings)
+	plt.plot(median_winnings, label="median")
+	plt.plot(median_winnings + std_winnings, label="median + std")
+	plt.plot(median_winnings - std_winnings, label="median - std")
+	plt.title("Figure 5")
 	plt.xlabel("Spins")
 	plt.ylabel("Winnings")
+	plt.legend()
 	save_plot("figure5.png")
 	plt.close()
   		   	  			  	 		  		  		    	 		 		   		 		  
