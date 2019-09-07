@@ -20,9 +20,9 @@ GT honor code violation.
   		   	  			  	 		  		  		    	 		 		   		 		  
 -----do not edit anything above this line---  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
-Student Name: Tucker Balch (replace with your name)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT User ID: tb34 (replace with your User ID)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT ID: 900897987 (replace with your GT ID)  		   	  			  	 		  		  		    	 		 		   		 		  
+Student Name: Kok Jian Yu (replace with your name)  		   	  			  	 		  		  		    	 		 		   		 		  
+GT User ID: jkok7 (replace with your User ID)  		   	  			  	 		  		  		    	 		 		   		 		  
+GT ID: 903550380 (replace with your GT ID)  		   	  			  	 		  		  		    	 		 		   		 		  
 """  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
@@ -43,20 +43,21 @@ def f(allocs, *args):
     sr = np.sqrt(252) * adr / sddr
     return -sr
 
+# Prices must be a 1d or 2d array.
 def calculate_portfolio(prices, allocs):
     df = prices.copy()
-    if len(df.shape) > 1:
+    # if prices is 2d(multiple stocks)
+    if len(df.shape) == 2:
         df = df.div(df.iloc[0,:])
         df *= allocs
         portfolio = df.sum(axis=1)
-    else:
+    elif len(df.shape) == 1: # if prices is 1d(one stock), assumes alloc = 1 
         portfolio = df.div(df.iloc[0])
-
     return portfolio
 
 def calculate_daily_returns(portfolio):
     df_portfolio = portfolio.copy()
-    portfolio_dr = portfolio.pct_change(1).fillna(0)
+    portfolio_dr = df_portfolio.pct_change(1).fillna(0)
     return portfolio_dr
  		  		  		    	 		 		   		 		  
 # This is the function that will be tested by the autograder  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -95,7 +96,7 @@ def optimize_portfolio(sd=dt.datetime(2008,1,1), ed=dt.datetime(2009,1,1), \
 
     # Get daily portfolio value  		   	  			  	 		  		  		    	 		 		   		 		  
     port_val = portfolio_dr # add code here to compute daily portfolio values  		   	  			  	 		  		  		    	 		 		   		 		  
-    prices_SPY_normalized = prices_SPY.div(prices_SPY.iloc[0])
+    prices_SPY_normalized = calculate_portfolio(prices_SPY, [1])
     # Compare daily portfolio value with SPY using a normalized plot  		   	  			  	 		  		  		    	 		 		   		 		  
     if gen_plot:  		   	  			  	 		  		  		    	 		 		   		 		  
         # add code to plot here  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -103,7 +104,7 @@ def optimize_portfolio(sd=dt.datetime(2008,1,1), ed=dt.datetime(2009,1,1), \
         ax = df_temp.plot(title="Daily Portfolio value and SPY")
         ax.set_xlabel("Date")
         ax.set_ylabel("Price")
-        plt.savefig("1.png")
+        plt.savefig("Daily Portfolio value and SPY.png")
         pass  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
     return allocs, cr, adr, sddr, sr  		   	  			  	 		  		  		    	 		 		   		 		  
