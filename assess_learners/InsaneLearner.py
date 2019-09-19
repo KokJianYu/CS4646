@@ -1,15 +1,14 @@
 import numpy as np  		   	  			  	 		  		  		    	 		 		   		 		  
+import BagLearner as bl	
+import LinRegLearner as lrl	  	 		  		  		    	 		 		   		 		  
+class InsaneLearner(object):  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
-class BagLearner(object):  		   	  			  	 		  		  		    	 		 		   		 		  
-  		   	  			  	 		  		  		    	 		 		   		 		  
-    def __init__(self, learner, kwargs, bags, boost, verbose = False):  		   	  			  	 		  		  		    	 		 		   		 		  
+    def __init__(self, verbose = False):  		   	  			  	 		  		  		    	 		 		   		 		  
         self.learners = []
-        for i in range(bags):
-            # Pass on kwargs to learner
-            l = learner(**kwargs)
+        learner = bl.BagLearner
+        for i in range(20):
+            l = learner(lrl.LinRegLearner, kwargs={}, bags=20, boost=False, verbose=False)
             self.learners.append(l)
-        if verbose:
-            print(self.learners)
   		   	  			  	 		  		  		    	 		 		   		 		  
     def author(self):  		   	  			  	 		  		  		    	 		 		   		 		  
         return 'jkok7' # replace tb34 with your Georgia Tech username  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -21,11 +20,9 @@ class BagLearner(object):
         @param dataY: the Y training values  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
-        num_data = dataY.shape[0]
+        # TODO
         for learner in self.learners:
-            indices = range(num_data)
-            random_indices = np.random.choice(num_data, num_data, replace=True)
-            learner.addEvidence(dataX[indices], dataY[indices])
+            learner.addEvidence(dataX, dataY)
   		   	  			  	 		  		  		    	 		 		   		 		  
     def query(self,points):  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  

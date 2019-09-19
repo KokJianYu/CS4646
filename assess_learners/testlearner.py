@@ -24,15 +24,21 @@ GT honor code violation.
   		   	  			  	 		  		  		    	 		 		   		 		  
 import numpy as np  		   	  			  	 		  		  		    	 		 		   		 		  
 import math  		   	  			  	 		  		  		    	 		 		   		 		  
-import LinRegLearner as lrl  		   	  			  	 		  		  		    	 		 		   		 		  
+import LinRegLearner as lrl 
+import DTLearner as dtl 	
+import RTLearner as rtl	   
+import BagLearner as bl	  			  	 		  		  		    	 		 		   		 		  
 import sys  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 if __name__=="__main__":  		   	  			  	 		  		  		    	 		 		   		 		  
     if len(sys.argv) != 2:  		   	  			  	 		  		  		    	 		 		   		 		  
         print("Usage: python testlearner.py <filename>")  		   	  			  	 		  		  		    	 		 		   		 		  
         sys.exit(1)  		   	  			  	 		  		  		    	 		 		   		 		  
-    inf = open(sys.argv[1])  		   	  			  	 		  		  		    	 		 		   		 		  
-    data = np.array([list(map(float,s.strip().split(','))) for s in inf.readlines()])  		   	  			  	 		  		  		    	 		 		   		 		  
+    inf = open(sys.argv[1])
+    
+    data = np.genfromtxt(inf,delimiter=",")
+    if sys.argv[1] == 'Data/Istanbul.csv':	  			  	 		  		  		    	 		 		   		 		  
+        data = data[1:, 1:]
   		   	  			  	 		  		  		    	 		 		   		 		  
     # compute how much of the data is training and testing  		   	  			  	 		  		  		    	 		 		   		 		  
     train_rows = int(0.6* data.shape[0])  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -48,7 +54,10 @@ if __name__=="__main__":
     print(f"{testY.shape}")  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
     # create a learner and train it  		   	  			  	 		  		  		    	 		 		   		 		  
-    learner = lrl.LinRegLearner(verbose = True) # create a LinRegLearner  		   	  			  	 		  		  		    	 		 		   		 		  
+    # learner = lrl.LinRegLearner(verbose = True) # create a LinRegLearner  		   	  			  	 		  		  		    	 		 		   		 		  
+    # learner = dtl.DTLearner(10, verbose=True)
+    # learner = rtl.RTLearner(10, verbose=True)
+    learner = bl.BagLearner(dtl.DTLearner, kwargs={"leaf_size":2}, bags=10, boost=False, verbose=True)
     learner.addEvidence(trainX, trainY) # train it  		   	  			  	 		  		  		    	 		 		   		 		  
     print(learner.author())  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
