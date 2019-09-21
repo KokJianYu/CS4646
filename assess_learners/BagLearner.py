@@ -23,9 +23,8 @@ class BagLearner(object):
   		   	  			  	 		  		  		    	 		 		   		 		  
         num_data = dataY.shape[0]
         for learner in self.learners:
-            indices = range(num_data)
             random_indices = np.random.choice(num_data, num_data, replace=True)
-            learner.addEvidence(dataX[indices], dataY[indices])
+            learner.addEvidence(dataX[random_indices], dataY[random_indices])
   		   	  			  	 		  		  		    	 		 		   		 		  
     def query(self,points):  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
