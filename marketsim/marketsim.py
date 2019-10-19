@@ -56,8 +56,7 @@ def compute_portvals(orders_file = "./orders/orders.csv", start_val = 1000000, c
     # Get data from start to end date.	   	  			  	 		  		  		    	 		 		   		 		  
     datas = get_data(unique_symbols, date_list)  		   	  			  	 		  		  		    	 		 		   		 		  
     datas = datas[unique_symbols]  # remove SPY 
-    date_list = datas.index 		   	  			  	 		  		  		    	 		 		   		 		 
-    # rv = pd.DataFrame(index=datas.index, data=datas.values) 		   	  			  	 		  		  		    	 		 		   		 		  	  	 		  		  		    	 		 		   		 		  
+    date_list = datas.index 		   	  			  	 				   	  			  	 		  		  		    	 		 		   		 		  	  	 		  		  		    	 		 		   		 		  
     # Remove unfulfilled orders, orders that are made when market is closed.
     orders = orders[orders["Date"].isin(datas.index.strftime('%Y-%m-%d'))]
     portfolio = pd.DataFrame(np.zeros((len(date_list), 1)), index = date_list)
