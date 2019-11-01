@@ -1,0 +1,28 @@
+################################################################################
+Results for Manual Strategy:
+
+Date Range: 2010-01-01 00:00:00 to 2012-01-01 00:00:00
+
+Sharpe Ratio of Fund: 1.8689102632534749
+
+Cumulative Return of Fund: 0.13563449999999921
+
+Standard Deviation of Fund: 0.0021634675193689646
+
+Average Daily Return of Fund: 0.000254705637818573
+
+Final Portfolio Value: 113563.44999999992
+################################################################################
+Results for BenchmarkStrategy:
+
+Date Range: 2010-01-01 00:00:00 to 2012-01-01 00:00:00
+
+Sharpe Ratio of Fund: -0.2565584997425765
+
+Cumulative Return of Fund: -0.08340000000000003
+
+Standard Deviation of Fund: 0.008472575083819316
+
+Average Daily Return of Fund: -0.0001369309317023681
+
+Final Portfolio Value: 91660.0
