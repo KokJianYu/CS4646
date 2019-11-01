@@ -1,4 +1,4 @@
-from TheoreticallyOptimalStrategy import Strategy
+from TheoreticallyOptimalStrategy import Strategy, BenchmarkStrategy
 from indicators import StochasticIndicator, BollingerBandIndicator, MomentumIndicator, get_test_data_with_close_high_low
 from util import get_data, plot_data 
 import datetime as dt  	
@@ -40,7 +40,8 @@ class ManualStrategy(Strategy):
         current_holdings = 0
         action = 0
         for i in range(data.shape[0]):
-            si_value = si.iloc[i, 1]
+            si_k_value = si.iloc[i, 1]
+            si_d_value = si.iloc[i, 2]
             bbi_low = bbi.iloc[i, 3]
             bbi_mid = bbi.iloc[i, 1]
             bbi_high = bbi.iloc[i, 2]
@@ -48,11 +49,11 @@ class ManualStrategy(Strategy):
             current_price = d[i]
 
             if bbi_high <= current_price:
-                if si_value > STOCHASTIC_OVERBUY_THRESHOLD:
+                if si_k_value > STOCHASTIC_OVERBUY_THRESHOLD:
                     action = -1
 
             if bbi_low >= current_price:
-                if si_value < STOCHASTIC_OVERSELL_THRESHOLD:
+                if si_k_value < STOCHASTIC_OVERSELL_THRESHOLD:
                     action = 1
 
             if current_holdings == 1000:
@@ -82,10 +83,9 @@ class ManualStrategy(Strategy):
 def author():
     return "jkok7"
 
+def generate_graphs():
+    from marketsim import runSimulation
+    runSimulation(ManualStrategy(), BenchmarkStrategy(), "strategies/manual_insample.png",True)
+    runSimulation(ManualStrategy(), BenchmarkStrategy(), "strategies/manual_outofsample.png",True, False)
 if __name__ == "__main__":
-    df = ManualStrategy().testPolicy(symbol = "JPM", sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2010,1,1), sv = 100000)
-    portfolio = compute_portvals_df(df, "JPM", 100000, 0,0)
-    print(portfolio)
-    portfolio.plot()
-    #print(portfolio)
-    plt.savefig("temp.png")
+    generate_graphs()

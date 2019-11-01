@@ -33,7 +33,7 @@ class TheoreticallyOptimalStrategy(Strategy):
         return trade_df
     
     def getStrategyName(self):
-        return "TheoreticallyOptimalStrategy"
+        return "Theoretically Optimal Strategy"
 
 class BenchmarkStrategy(Strategy):
     def testPolicy(self, symbol, sd, ed, sv):
@@ -45,14 +45,13 @@ class BenchmarkStrategy(Strategy):
         return trade_df
 
     def getStrategyName(self):
-        return "BenchmarkStrategy"
+        return "Benchmark Strategy"
 
 def author():
     return jkok7
 
+def generate_graphs():
+    from marketsim import runSimulation
+    runSimulation(TheoreticallyOptimalStrategy(), BenchmarkStrategy(), "strategies/theoretical.png")
 if __name__ == "__main__":
-    df = TheoreticallyOptimalStrategy().testPolicy(symbol = "JPM", sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2010,1,1), sv = 100000)
-    portfolio = compute_portvals_df(df, "JPM", 100000, 0,0)
-    portfolio.plot()
-    #print(portfolio)
-    plt.savefig("temp.png")
+    generate_graphs()

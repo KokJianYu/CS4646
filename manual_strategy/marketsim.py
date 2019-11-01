@@ -206,20 +206,51 @@ def calculate_daily_returns(portfolio):
 def author():
     return "jkok7"
 
-if __name__ == "__main__":  	
-    from TheoreticallyOptimalStrategy import TheoreticallyOptimalStrategy, BenchmarkStrategy
-    from ManualStrategy import ManualStrategy	   	  			  	 		  		  		    	 		 		   		 		  
+def runSimulation(Strategy1, Strategy2, fileName, plot_entry_points=False,in_sample=True):
     import matplotlib.pyplot as plt
     symbol = "JPM"
-    start_date = dt.datetime(2008,1,1)
-    end_date = dt.datetime(2010,1,1)
-    pv1, cum_ret, std_daily_ret, avg_daily_ret, trades1 = test_code_df(TheoreticallyOptimalStrategy(),symbol, start_date=start_date ,end_date=end_date,commission=0, impact=0)
-    pv2, cum_ret, std_daily_ret, avg_daily_ret, trades2 = test_code_df(BenchmarkStrategy(),symbol,start_date=start_date ,end_date=end_date)
+    if in_sample:
+        start_date = dt.datetime(2008,1,1)
+        end_date = dt.datetime(2009,12,31)
+    else:
+        start_date = dt.datetime(2010,1,1)
+        end_date = dt.datetime(2011,12,31)
+    pv1, cum_ret, std_daily_ret, avg_daily_ret, trades1 = test_code_df(Strategy1,symbol, start_date=start_date ,end_date=end_date,commission=0, impact=0)
+    pv2, cum_ret, std_daily_ret, avg_daily_ret, trades2 = test_code_df(Strategy2,symbol,start_date=start_date ,end_date=end_date)
     #pv2, cum_ret, std_daily_ret, avg_daily_ret = test_code_df(ManualStrategy())
     pv1 = pv1/pv1[0]
     pv2 = pv2/pv2[0]
-    pv1.plot(label="Optimal Strategy", color="red")
-    pv2.plot(label="Benchmark", color="green")
+    pv1.plot(label=Strategy1.getStrategyName(), color="red")
+    pv2.plot(label=Strategy2.getStrategyName(), color="green")
+    if plot_entry_points:
+        holdings = 0
+        for day in trades1.index:
+            holdings += trades1.loc[day]
+            if (holdings == 1000).all() and (trades1.loc[day] > 0).all():
+                plt.vlines(day, pv1.loc[day], pv1.loc[day]+0.2, color="blue")
+            if (holdings == -1000).all() and (trades1.loc[day] < 0).all():
+                plt.vlines(day, pv1.loc[day]-0.2, pv1.loc[day], color="black")
+    plt.legend()
+    if in_sample:
+        plt.title("In-Sample")
+    else:
+        plt.title("Out-Of-Sample")
+    plt.savefig(fileName)
+    plt.close()
+
+def main():	   	  			  	 		  		  		    	 		 		   		 		  
+    import matplotlib.pyplot as plt
+    
+    symbol = "JPM"
+    start_date = dt.datetime(2008,1,1)
+    end_date = dt.datetime(2010,1,1)
+    pv1, cum_ret, std_daily_ret, avg_daily_ret, trades1 = test_code_df(Strategy1,symbol, start_date=start_date ,end_date=end_date,commission=0, impact=0)
+    pv2, cum_ret, std_daily_ret, avg_daily_ret, trades2 = test_code_df(Strategy2,symbol,start_date=start_date ,end_date=end_date)
+    #pv2, cum_ret, std_daily_ret, avg_daily_ret = test_code_df(ManualStrategy())
+    pv1 = pv1/pv1[0]
+    pv2 = pv2/pv2[0]
+    pv1.plot(label=Strategy1.getStrategyName(), color="red")
+    pv2.plot(label=Strategy2.getStrategyName(), color="green")
     plt.legend()
     plt.savefig("strategies/theoretical.png")
 
@@ -232,6 +263,7 @@ if __name__ == "__main__":
     #pv2, cum_ret, std_daily_ret, avg_daily_ret = test_code_df(ManualStrategy())
     pv1 = pv1/pv1[0]
     pv2 = pv2/pv2[0]
+    plt.title("In-Sample")
     pv1.plot(label="Manual Strategy", color="red")
     pv2.plot(label="Benchmark", color="green")
     holdings = 0
@@ -253,6 +285,7 @@ if __name__ == "__main__":
     #pv2, cum_ret, std_daily_ret, avg_daily_ret = test_code_df(ManualStrategy())
     pv1 = pv1/pv1[0]
     pv2 = pv2/pv2[0]
+    plt.title("Out-of-Sample")
     pv1.plot(label="Manual Strategy", color="red")
     pv2.plot(label="Benchmark", color="green")
     holdings = 0
@@ -264,4 +297,5 @@ if __name__ == "__main__":
             plt.vlines(day, pv1.loc[day]-0.2, pv1.loc[day], color="black")
     plt.legend()
     plt.savefig("strategies/manual_outsample.png")
+	
 

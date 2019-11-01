@@ -97,7 +97,7 @@ class StochasticIndicator(Indicator):
         #print(highest[-4], lowest[-4], self.data[-4])
         #print(osc)
         # num_days = self.data.shape[0]
-        cols = ["Adjusted_Close", "Stochastic", "Fast Stochastic"]
+        cols = ["Adjusted_Close", "Stochastic", "Signal"]
         SMA_osc = SMAIndicator(osc, 3).calculate_helper_data()
 
         self.helper_data = pd.DataFrame(index=data.index, columns=cols)
@@ -112,7 +112,7 @@ class StochasticIndicator(Indicator):
         a0.title.set_text("Adjusted Close")
         plt.setp(a0.xaxis.get_majorticklabels(), rotation=45)
         a1.plot(self.helper_data.iloc[:,1], label="Stochastic")
-        a1.plot(self.helper_data.iloc[:,2], label="Fast Stochastic")
+        a1.plot(self.helper_data.iloc[:,2], label="Signal")
         a1.hlines(80, self.helper_data.index[0], self.helper_data.index[-1], linestyles="dotted")
         a1.hlines(20, self.helper_data.index[0], self.helper_data.index[-1], linestyles="dotted")
         a1.title.set_text("Stochastic Indicator")
@@ -130,24 +130,24 @@ def calculate(indicator: Indicator, visualize=False):
 def normalize_data(data):
     return data / data[0]
 
-def get_test_data():
-    start_date = START_DATE
-    end_date = END_DATE
+def get_test_data(sd,ed,sym):
+    start_date = sd
+    end_date = ed
     date_list = pd.date_range(start_date, end_date)
-    datas = get_data([SYMBOL], date_list)[SYMBOL]
+    datas = get_data([sym], date_list)[sym]
     datas = datas.fillna(method="ffill")
     datas = datas.fillna(method="bfill")
     datas = normalize_data(datas)
     return datas
 
-def get_test_data_with_close_high_low():
-    start_date = START_DATE
-    end_date = END_DATE
+def get_test_data_with_close_high_low(sd, ed, sym):
+    start_date = sd
+    end_date = ed
     date_list = pd.date_range(start_date, end_date)
-    d = get_data([SYMBOL], date_list)[SYMBOL]
-    close = get_data([SYMBOL], date_list, colname="Close")[SYMBOL]
-    high = get_data([SYMBOL], date_list, colname="High")[SYMBOL]
-    low = get_data([SYMBOL], date_list, colname="Low")[SYMBOL]
+    d = get_data([sym], date_list)[sym]
+    close = get_data([sym], date_list, colname="Close")[sym]
+    high = get_data([sym], date_list, colname="High")[sym]
+    low = get_data([sym], date_list, colname="Low")[sym]
     datas = pd.DataFrame(index=d.index, columns=["Adj Close", "Close", "High", "Low"])
     datas.iloc[:,0] = d
     datas.iloc[:,1] = close
@@ -161,13 +161,17 @@ def get_test_data_with_close_high_low():
 def author():
     return "jkok7"
 
-if __name__ == "__main__":
+def main():
     START_DATE = dt.datetime(2008, 1, 1)
-    END_DATE = dt.datetime(2010,1,1)
+    END_DATE = dt.datetime(2009,12,31)
     SYMBOL = "JPM"
     from pandas.plotting import register_matplotlib_converters
     register_matplotlib_converters()
-    calculate(SMAIndicator(get_test_data()), True)
-    calculate(MomentumIndicator(get_test_data()), True)
-    calculate(BollingerBandIndicator(get_test_data()), True)
-    calculate(StochasticIndicator(get_test_data_with_close_high_low()), True)
+    calculate(SMAIndicator(get_test_data(START_DATE, END_DATE, SYMBOL)), True)
+    calculate(MomentumIndicator(get_test_data(START_DATE, END_DATE, SYMBOL)), True)
+    calculate(BollingerBandIndicator(get_test_data(START_DATE, END_DATE, SYMBOL)), True)
+    calculate(StochasticIndicator(get_test_data_with_close_high_low(START_DATE, END_DATE, SYMBOL)), True)   
+
+if __name__ == "__main__":
+    main()
+    
