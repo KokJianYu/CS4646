@@ -37,7 +37,7 @@ class MomentumIndicator(Indicator):
         plt.setp(a1.xaxis.get_majorticklabels(), rotation=45)
         plt.legend()
         f.tight_layout()
-        f.savefig("indicators/Momentum.png")	
+        f.savefig("Momentum.png")	
 
 class SMAIndicator(Indicator):
     def __init__(self, data, n=8):
@@ -55,7 +55,7 @@ class SMAIndicator(Indicator):
     def plot_graph(self):
         self.helper_data.plot()
         plt.title("Simple Moving Average Indicator")
-        plt.savefig("indicators/SMA.png")	   
+        plt.savefig("SMA.png")	   
         plt.show()
         
 class BollingerBandIndicator(Indicator):
@@ -79,7 +79,7 @@ class BollingerBandIndicator(Indicator):
     def plot_graph(self):
         self.helper_data.plot()
         plt.title("Bollinger Band Indicator")
-        plt.savefig("indicators/BBI.png")	   
+        plt.savefig("BBI.png")	   
         plt.show()
 
 class StochasticIndicator(Indicator):
@@ -119,7 +119,7 @@ class StochasticIndicator(Indicator):
         plt.setp(a1.xaxis.get_majorticklabels(), rotation=45)
         plt.legend()
         f.tight_layout()
-        f.savefig("indicators/SI.png")	   
+        f.savefig("SI.png")	   
 
 def calculate(indicator: Indicator, visualize=False):
     helper_data = indicator.calculate_helper_data()

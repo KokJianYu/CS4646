@@ -52,6 +52,7 @@ def author():
 
 def generate_graphs():
     from marketsim import runSimulation
-    runSimulation(TheoreticallyOptimalStrategy(), BenchmarkStrategy(), "strategies/theoretical.png")
+    runSimulation(TheoreticallyOptimalStrategy(), BenchmarkStrategy(), "theoretical.png")
+
 if __name__ == "__main__":
     generate_graphs()

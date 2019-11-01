@@ -85,7 +85,7 @@ def author():
 
 def generate_graphs():
     from marketsim import runSimulation
-    runSimulation(ManualStrategy(), BenchmarkStrategy(), "strategies/manual_insample.png",True)
-    runSimulation(ManualStrategy(), BenchmarkStrategy(), "strategies/manual_outofsample.png",True, False)
+    runSimulation(ManualStrategy(), BenchmarkStrategy(), "manual_insample.png",True)
+    runSimulation(ManualStrategy(), BenchmarkStrategy(), "manual_outofsample.png",True, False)
 if __name__ == "__main__":
     generate_graphs()
