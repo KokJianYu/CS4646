@@ -9,7 +9,7 @@ After calling `Indicator.calculate_helper_data()`, `Indicator.plot_graph()` can 
 
 To use a strategy, simply import the Strategy, and run it by calling Strategy.testPolicy()
 
-To generate all charts of indicators with default dataset, run command "python indicators.py". 
+To generate all charts of indicators with default dataset, run command "python indicators.py". or execute method main() in indicators.py
 
 To generate all charts required with TheoreticallyOptimallyStrategy, run command "python TheoreticallyOptimallyStrategy.py". or execute generate_graph method in TheoreticallyOptimallyStrategy.py
 To generate all charts required with ManualStrategy, run command "python ManualStrategy.py", or execute generate_graph method in ManualStrategy.py
