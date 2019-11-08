@@ -21,9 +21,9 @@ GT honor code violation.
   		   	  			  	 		  		  		    	 		 		   		 		  
 -----do not edit anything above this line---  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
-Student Name: Tucker Balch (replace with your name)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT User ID: tb34 (replace with your User ID)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT ID: 900897987 (replace with your GT ID)  		   	  			  	 		  		  		    	 		 		   		 		  
+Student Name: Jian Yu Kok (replace with your name)  		   	  			  	 		  		  		    	 		 		   		 		  
+GT User ID: jkok7 (replace with your User ID)  		   	  			  	 		  		  		    	 		 		   		 		  
+GT ID: 903550380 (replace with your GT ID)  		   	  			  	 		  		  		    	 		 		   		 		  
 """  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 import numpy as np  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -44,7 +44,20 @@ class QLearner(object):
         self.verbose = verbose  		   	  			  	 		  		  		    	 		 		   		 		  
         self.num_actions = num_actions  		   	  			  	 		  		  		    	 		 		   		 		  
         self.s = 0  		   	  			  	 		  		  		    	 		 		   		 		  
-        self.a = 0  		   	  			  	 		  		  		    	 		 		   		 		  
+        self.a = 0  		   	  		
+
+        # My Code
+        self.num_states = num_states
+        self.q_table = np.zeros((num_states, num_actions))
+        self.epsilon = rar
+        self.epsilon_decay = radr
+        self.lr = alpha
+        self.discount = gamma
+        self.T = np.zeros((num_states, num_actions, num_states))
+        self.T += 0.00001
+        self.R = np.zeros((num_states, num_actions))
+        self.dyna = dyna
+        # My Code		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
     def querysetstate(self, s):  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -52,9 +65,15 @@ class QLearner(object):
         @param s: The new state  		   	  			  	 		  		  		    	 		 		   		 		  
         @returns: The selected action  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
-        self.s = s  		   	  			  	 		  		  		    	 		 		   		 		  
-        action = rand.randint(0, self.num_actions-1)  		   	  			  	 		  		  		    	 		 		   		 		  
-        if self.verbose: print(f"s = {s}, a = {action}")  		   	  			  	 		  		  		    	 		 		   		 		  
+        self.s = s  
+        if rand.random() < self.epsilon:
+            action = rand.randint(0, self.num_actions-1)
+        else:
+            action = np.argmax(self.q_table[self.s])              		   	  			  	 		  		  		    	 		 		   		 		  
+        if self.verbose: 
+            print(f"s = {s}, a = {action}")  		   	  			  	 		  		  		    	 		 		   		 		  
+        
+        self.a = action
         return action  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
     def query(self,s_prime,r):  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -63,10 +82,43 @@ class QLearner(object):
         @param s_prime: The new state  		   	  			  	 		  		  		    	 		 		   		 		  
         @param r: The ne state  		   	  			  	 		  		  		    	 		 		   		 		  
         @returns: The selected action  		   	  			  	 		  		  		    	 		 		   		 		  
-        """  		   	  			  	 		  		  		    	 		 		   		 		  
-        action = rand.randint(0, self.num_actions-1)  		   	  			  	 		  		  		    	 		 		   		 		  
+        """  
+        self.T[self.s, self.a, s_prime] += 1
+        self.R[self.s, self.a] = (1-self.lr)*self.R[self.s, self.a] + self.lr*r
+        u = r + self.discount * np.max(self.q_table[s_prime, :])
+        diff = u - self.q_table[self.s, self.a]
+        self.q_table[self.s, self.a] += self.lr * (diff)
+
+        if rand.random() < self.epsilon:
+            action = rand.randint(0, self.num_actions-1)
+        else:
+            action = np.argmax(self.q_table[s_prime])    	   	  			  	 		  		  		    	 		 		   		 		  
+        		   	  			  	 		  		  		    	 		 		   		 			   	  			  	 		  		  		    	 		 		   		 		  
+
         if self.verbose: print(f"s = {s_prime}, a = {action}, r={r}")  		   	  			  	 		  		  		    	 		 		   		 		  
-        return action  		   	  			  	 		  		  		    	 		 		   		 		  
+        self.s = s_prime
+        self.a = action
+        self.epsilon *= self.epsilon_decay
+
+        for i in range(self.dyna):
+            self.hallucinate()
+
+        return action  		   	  		
+    
+    def hallucinate(self):
+        s = rand.randint(0, self.num_states-1)
+        a = rand.randint(0, self.num_actions-1)
+        T = self.T[s,a,:] / self.T[s,a,:].sum()
+        s_prime = np.argmax(T)
+
+        r = self.R[s,a]
+
+        u = r + self.discount * np.max(self.q_table[s_prime, :])
+        diff = u - self.q_table[s, a]
+        self.q_table[s, a] += self.lr * (diff)
+
+    def author(self):
+        return "jkok7"  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 if __name__=="__main__":  		   	  			  	 		  		  		    	 		 		   		 		  
     print("Remember Q from Star Trek? Well, this isn't him")  		   	  			  	 		  		  		    	 		 		   		 		  
