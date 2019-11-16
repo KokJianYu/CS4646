@@ -67,10 +67,7 @@ class QLearner(object):
         @returns: The selected action  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
         self.s = s  
-        if rand.random() < self.epsilon:
-            action = rand.randint(0, self.num_actions-1)
-        else:
-            action = np.argmax(self.q_table[self.s])              		   	  			  	 		  		  		    	 		 		   		 		  
+        action = np.argmax(self.q_table[self.s])              		   	  			  	 		  		  		    	 		 		   		 		  
         if self.verbose: 
             print(f"s = {s}, a = {action}")  		   	  			  	 		  		  		    	 		 		   		 		  
         
