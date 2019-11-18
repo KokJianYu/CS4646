@@ -71,10 +71,10 @@ class StrategyLearner(object):
         indicator_s = StochasticIndicator(data, 14).calculate_helper_data()
         
         # Get bins
-        self.bin_momentum = pd.qcut(indicator_m.iloc[:,1], 4, retbins=True, duplicates="drop")[1]
-        self.bin_bollinger = pd.qcut(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], 4, retbins=True, duplicates="drop")[1]
-        self.bin_stochastic = pd.qcut(indicator_s.iloc[:,1], 4, retbins=True, duplicates="drop")[1]
-        self.bin_price = pd.qcut(data.iloc[:,0].diff(periods=1), 3, retbins=True, duplicates="drop")[1]
+        self.bin_momentum = pd.qcut(indicator_m.iloc[:,1], 5, retbins=True, duplicates="drop")[1]
+        self.bin_bollinger = pd.qcut(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], 5, retbins=True, duplicates="drop")[1]
+        self.bin_stochastic = pd.qcut(indicator_s.iloc[:,1], 5, retbins=True, duplicates="drop")[1]
+        self.bin_price = pd.qcut(data.iloc[:,0].diff(periods=1), 4, retbins=True, duplicates="drop")[1]
 
         momentums = np.digitize(indicator_m.iloc[:,1], self.bin_momentum)
         bb_diffs = np.digitize(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], self.bin_bollinger)
@@ -82,22 +82,22 @@ class StrategyLearner(object):
         price_features = np.digitize(data.iloc[:,0].diff(), self.bin_price)
         # initialize learner
         num_states = self.getTotalNumberOfStates()
-        # self.learner = QLearner(num_states=num_states, \
-        #                     num_actions = 3, \
-        #                     alpha = 0.02, \
-        #                     gamma = 0.9, \
-        #                     rar = 0.99, \
-        #                     radr = 0.999, \
-        #                     dyna = 0, \
-        #                     verbose = False)
         self.learner = QLearner(num_states=num_states, \
-                    num_actions = 3, \
-                    alpha = self.alpha, \
-                    gamma = self.gamma, \
-                    rar = self.rar, \
-                    radr = self.radr, \
-                    dyna = 0, \
-                    verbose = False)
+                            num_actions = 3, \
+                            alpha = 0.02, \
+                            gamma = 0.9, \
+                            rar = 0.99, \
+                            radr = 0.999, \
+                            dyna = 0, \
+                            verbose = False)
+        # self.learner = QLearner(num_states=num_states, \
+        #             num_actions = 3, \
+        #             alpha = self.alpha, \
+        #             gamma = self.gamma, \
+        #             rar = self.rar, \
+        #             radr = self.radr, \
+        #             dyna = 0, \
+        #             verbose = False)
 
         # loop day by day
         # create variables for loop
@@ -271,17 +271,14 @@ class StrategyLearner(object):
     def convertFeaturesToState(self, price, momentum, bollinger, stochastic, holding):  		   	  			  	 		  		  		    	 		 		   		 		  
         if np.isnan(momentum) or np.isnan(bollinger) or np.isnan(stochastic) or momentum == len(self.bin_momentum) or bollinger == len(self.bin_bollinger) or stochastic == len(self.bin_stochastic):
             return 0
-        # price = min(-2, price)
-        # price = max(2, price)
-        # price += 2
-        # momentum = int((momentum[1] + 1)/2 * 5) # 0 to 5
-        # stochastic = int(stochastic[1] / 100 * 5) # 0 to 5
-        holding += 1 # 3 possible value
-        #print(bollinger[1] - bollinger[3])
-        # bb_1 = int(max(5, (bollinger[1] - bollinger[3]) / 2))
-        # momentum = np.digitize([momentum[1]], self.bin_momentum)
-        # stochastic = np.digitize([stochastic[1]], self.bin_bollinger)
-        # bb_1 = np.digitize([bollinger[1] - bollinger[3]], self.bin_stochastic)
+        
+        # These values starts from 1. -1 to make it start from 0
+        momentum -= 1
+        bollinger -= 1
+        stochastic -= 1
+        price -= 1
+        # Holding starts from -1, +1 to make it start from 0
+        holding += 1
         return momentum + stochastic*5 + bollinger*25 + holding*125 + price*375
         #return momentum*150 + bb_1*25+ holding*5 + price
         #print(price, momentum, bollinger, stochastic, holding)
