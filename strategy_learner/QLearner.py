@@ -67,7 +67,11 @@ class QLearner(object):
         @returns: The selected action  		   	  			  	 		  		  		    	 		 		   		 		  
         """  		   	  			  	 		  		  		    	 		 		   		 		  
         self.s = s  
-        action = np.argmax(self.q_table[self.s])              		   	  			  	 		  		  		    	 		 		   		 		  
+        if rand.random() < self.epsilon:
+            action = rand.randint(0, self.num_actions-1)
+        else:
+            action = np.argmax(self.q_table[self.s])
+        #action = np.argmax(self.q_table[self.s])              		   	  			  	 		  		  		    	 		 		   		 		  
         if self.verbose: 
             print(f"s = {s}, a = {action}")  		   	  			  	 		  		  		    	 		 		   		 		  
         
@@ -107,16 +111,17 @@ class QLearner(object):
         observed_states, observed_actions = np.nonzero(self.observed_s_a)
         random_p = np.random.random(size=(self.dyna))
         random_s = np.random.randint(len(observed_states), size=self.dyna)
-        T_matrix = self.T / self.T.sum(axis=-1)[:,:,None]
-        T_matrix = np.cumsum(T_matrix, axis=-1)
+        # T_matrix = self.T / self.T.sum(axis=-1)[:,:,None]
+        # T_matrix = np.cumsum(T_matrix, axis=-1)
         for i in range(self.dyna):
             idx = random_s[i]
             s = observed_states[idx]
             a = observed_actions[idx]
-            T = T_matrix[s,a,:]
-            #print(T)
-            prob = random_p[i]
-            s_prime = np.searchsorted(T, prob, side='left')
+            s_prime = np.argmax(self.T[s, a, :])
+            # T = T_matrix[s,a,:]
+            # #print(T)
+            # prob = random_p[i]
+            # s_prime = np.searchsorted(T, prob, side='left')
             r = self.R[s,a]
 
             u = r + self.discount * np.max(self.q_table[s_prime, :])
@@ -125,6 +130,6 @@ class QLearner(object):
 
     def author(self):
         return "jkok7"  	 		  		  		    	 		 		   		 		  
-  		   	  			  	 		  		  		    	 		 		   		 		  
+                            		  		  		    	 		 		   		 		  
 if __name__=="__main__":  		   	  			  	 		  		  		    	 		 		   		 		  
     print("Remember Q from Star Trek? Well, this isn't him")  		   	  			  	 		  		  		    	 		 		   		 		  

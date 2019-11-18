@@ -220,20 +220,21 @@ def runSimulation(Strategy1, Strategy2, fileName, plot_entry_points=False,in_sam
     #pv2, cum_ret, std_daily_ret, avg_daily_ret = test_code_df(ManualStrategy())
     pv1 = pv1/pv1[0]
     pv2 = pv2/pv2[0]
-    pv1.plot(label=Strategy1.getStrategyName(), color="red")
-    pv2.plot(label=Strategy2.getStrategyName(), color="green")
-    if plot_entry_points:
-        holdings = 0
-        for day in trades1.index:
-            holdings += trades1.loc[day]
-            if (holdings == 1000).all() and (trades1.loc[day] > 0).all():
-                plt.vlines(day, pv1.loc[day], pv1.loc[day]+0.2, color="blue")
-            if (holdings == -1000).all() and (trades1.loc[day] < 0).all():
-                plt.vlines(day, pv1.loc[day]-0.2, pv1.loc[day], color="black")
-    plt.legend()
-    if in_sample:
-        plt.title("In-Sample")
-    else:
-        plt.title("Out-Of-Sample")
-    plt.savefig(fileName)
-    plt.close()
+    # pv1.plot(label=Strategy1.getStrategyName(), color="red")
+    # pv2.plot(label=Strategy2.getStrategyName(), color="green")
+    # if plot_entry_points:
+    #     holdings = 0
+    #     for day in trades1.index:
+    #         holdings += trades1.loc[day]
+    #         if (holdings == 1000).all() and (trades1.loc[day] > 0).all():
+    #             plt.vlines(day, pv1.loc[day], pv1.loc[day]+0.2, color="blue")
+    #         if (holdings == -1000).all() and (trades1.loc[day] < 0).all():
+    #             plt.vlines(day, pv1.loc[day]-0.2, pv1.loc[day], color="black")
+    # plt.legend()
+    # if in_sample:
+    #     plt.title("In-Sample")
+    # else:
+    #     plt.title("Out-Of-Sample")
+    # plt.savefig(fileName)
+    # plt.close()
+    return pv1[-1], pv2[-1]

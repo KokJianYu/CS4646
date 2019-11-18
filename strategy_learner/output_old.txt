@@ -1,0 +1,1412 @@
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.8565
+Out Sample: Manual:1.1409 Learner:0.9818
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.93246
+Out Sample: Manual:1.1409 Learner:1.02402
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.14496
+Out Sample: Manual:1.1409 Learner:1.07062
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.11816
+Out Sample: Manual:1.1409 Learner:0.9322600000000001
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.1109
+Out Sample: Manual:1.1409 Learner:0.9447399999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.05934
+Out Sample: Manual:1.1409 Learner:0.9230799999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.0942399999999999
+Out Sample: Manual:1.1409 Learner:1.1435
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.05768
+Out Sample: Manual:1.1409 Learner:0.90692
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.01902
+Out Sample: Manual:1.1409 Learner:1.12392
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.06696
+Out Sample: Manual:1.1409 Learner:0.95522
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.08016
+Out Sample: Manual:1.1409 Learner:1.0404
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.06238
+Out Sample: Manual:1.1409 Learner:0.98612
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.98088
+Out Sample: Manual:1.1409 Learner:1.04042
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9404199999999999
+Out Sample: Manual:1.1409 Learner:1.0111400000000001
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.1853
+Out Sample: Manual:1.1409 Learner:0.99228
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.06526
+Out Sample: Manual:1.1409 Learner:0.92144
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.11096
+Out Sample: Manual:1.1409 Learner:1.0575999999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.05528
+Out Sample: Manual:1.1409 Learner:0.9714
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.1456
+Out Sample: Manual:1.1409 Learner:1.03646
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.02656
+Out Sample: Manual:1.1409 Learner:0.9371799999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.25836
+Out Sample: Manual:1.1409 Learner:0.9719
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.19644
+Out Sample: Manual:1.1409 Learner:0.97124
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.04474
+Out Sample: Manual:1.1409 Learner:1.00826
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.22396
+Out Sample: Manual:1.1409 Learner:1.0212999999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.9883
+Out Sample: Manual:1.1409 Learner:0.9754999999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9250400000000001
+Out Sample: Manual:1.1409 Learner:1.0265400000000002
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.11012
+Out Sample: Manual:1.1409 Learner:0.8938999999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.9443000000000001
+Out Sample: Manual:1.1409 Learner:1.05204
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.07294
+Out Sample: Manual:1.1409 Learner:0.9772799999999999
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9326599999999999
+Out Sample: Manual:1.1409 Learner:1.0888
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.0685799999999999
+Out Sample: Manual:1.1409 Learner:0.9279
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.28176
+Out Sample: Manual:1.1409 Learner:1.08012
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9384199999999999
+Out Sample: Manual:1.1409 Learner:0.9955
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.0451400000000002
+Out Sample: Manual:1.1409 Learner:1.0257800000000001
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0318200000000002
+Out Sample: Manual:1.1409 Learner:1.0462
+
+Hyper Params: alpha=3 gamma=0.99 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.8718600000000001
+Out Sample: Manual:1.1409 Learner:1.01584
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.07996
+Out Sample: Manual:1.1409 Learner:1.0152
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.2118600000000002
+Out Sample: Manual:1.1409 Learner:0.85914
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.05828
+Out Sample: Manual:1.1409 Learner:0.9757600000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.8516600000000001
+Out Sample: Manual:1.1409 Learner:0.93648
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.02416
+Out Sample: Manual:1.1409 Learner:1.0826
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.78232
+Out Sample: Manual:1.1409 Learner:0.8242799999999999
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.18008
+Out Sample: Manual:1.1409 Learner:0.9040999999999999
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.08098
+Out Sample: Manual:1.1409 Learner:0.9025400000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.8471
+Out Sample: Manual:1.1409 Learner:1.0049
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.07592
+Out Sample: Manual:1.1409 Learner:0.9137799999999999
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.8984400000000001
+Out Sample: Manual:1.1409 Learner:0.98484
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.05936
+Out Sample: Manual:1.1409 Learner:0.91542
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.18992
+Out Sample: Manual:1.1409 Learner:0.85138
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.81268
+Out Sample: Manual:1.1409 Learner:0.94954
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.00582
+Out Sample: Manual:1.1409 Learner:1.0409
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.17218
+Out Sample: Manual:1.1409 Learner:1.0625
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.8828400000000001
+Out Sample: Manual:1.1409 Learner:0.9803399999999999
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.85878
+Out Sample: Manual:1.1409 Learner:1.0375800000000002
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.1669200000000002
+Out Sample: Manual:1.1409 Learner:0.9507000000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.6985000000000001
+Out Sample: Manual:1.1409 Learner:0.9791000000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.02392
+Out Sample: Manual:1.1409 Learner:0.9138999999999999
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.03094
+Out Sample: Manual:1.1409 Learner:1.0621
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.17168
+Out Sample: Manual:1.1409 Learner:1.04516
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.92574
+Out Sample: Manual:1.1409 Learner:0.97204
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.0654
+Out Sample: Manual:1.1409 Learner:0.85222
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.1597
+Out Sample: Manual:1.1409 Learner:0.93672
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9049999999999999
+Out Sample: Manual:1.1409 Learner:0.87784
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.86694
+Out Sample: Manual:1.1409 Learner:1.0093599999999998
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9752800000000001
+Out Sample: Manual:1.1409 Learner:1.09834
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.2345
+Out Sample: Manual:1.1409 Learner:1.0141200000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.9639200000000001
+Out Sample: Manual:1.1409 Learner:0.91032
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9546799999999999
+Out Sample: Manual:1.1409 Learner:0.8705
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.25356
+Out Sample: Manual:1.1409 Learner:0.9433400000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.73272
+Out Sample: Manual:1.1409 Learner:1.0395400000000001
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.10954
+Out Sample: Manual:1.1409 Learner:1.00726
+
+Hyper Params: alpha=3 gamma=0.9 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.1094
+Out Sample: Manual:1.1409 Learner:0.9364599999999998
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.14526
+Out Sample: Manual:1.1409 Learner:1.0207199999999998
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.04512
+Out Sample: Manual:1.1409 Learner:0.9978
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.1481
+Out Sample: Manual:1.1409 Learner:1.0732599999999999
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.8992800000000001
+Out Sample: Manual:1.1409 Learner:0.9377600000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.72804
+Out Sample: Manual:1.1409 Learner:1.02584
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9604600000000001
+Out Sample: Manual:1.1409 Learner:1.1127
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.81716
+Out Sample: Manual:1.1409 Learner:1.00584
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.0697
+Out Sample: Manual:1.1409 Learner:1.01786
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.12254
+Out Sample: Manual:1.1409 Learner:0.9473600000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.84684
+Out Sample: Manual:1.1409 Learner:1.0503
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0426
+Out Sample: Manual:1.1409 Learner:1.1457799999999998
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.93776
+Out Sample: Manual:1.1409 Learner:1.0767
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.0979
+Out Sample: Manual:1.1409 Learner:0.9477200000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.08724
+Out Sample: Manual:1.1409 Learner:0.96686
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.93852
+Out Sample: Manual:1.1409 Learner:1.05866
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.05096
+Out Sample: Manual:1.1409 Learner:0.9300599999999999
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.07668
+Out Sample: Manual:1.1409 Learner:0.9170599999999999
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.0155
+Out Sample: Manual:1.1409 Learner:1.01446
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.27762
+Out Sample: Manual:1.1409 Learner:0.9665400000000002
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.10114
+Out Sample: Manual:1.1409 Learner:1.0265600000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9611400000000001
+Out Sample: Manual:1.1409 Learner:0.9643600000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.25442
+Out Sample: Manual:1.1409 Learner:0.97652
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9678
+Out Sample: Manual:1.1409 Learner:1.00724
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.12512
+Out Sample: Manual:1.1409 Learner:0.9600000000000002
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.04024
+Out Sample: Manual:1.1409 Learner:1.08148
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9197600000000001
+Out Sample: Manual:1.1409 Learner:1.0942
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.91674
+Out Sample: Manual:1.1409 Learner:1.0333599999999998
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.0297
+Out Sample: Manual:1.1409 Learner:0.9610000000000001
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.1913399999999998
+Out Sample: Manual:1.1409 Learner:1.00944
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.22988
+Out Sample: Manual:1.1409 Learner:0.9439
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.7719400000000001
+Out Sample: Manual:1.1409 Learner:1.05542
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.15056
+Out Sample: Manual:1.1409 Learner:0.96826
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9460799999999999
+Out Sample: Manual:1.1409 Learner:1.08362
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.1971
+Out Sample: Manual:1.1409 Learner:1.0456800000000002
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9920599999999999
+Out Sample: Manual:1.1409 Learner:1.00724
+
+Hyper Params: alpha=3 gamma=0.8 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9299200000000001
+Out Sample: Manual:1.1409 Learner:0.9101199999999999
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.21768
+Out Sample: Manual:1.1409 Learner:1.0471199999999998
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.08058
+Out Sample: Manual:1.1409 Learner:1.00992
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.1977
+Out Sample: Manual:1.1409 Learner:1.0019200000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.09452
+Out Sample: Manual:1.1409 Learner:1.0863
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9787800000000001
+Out Sample: Manual:1.1409 Learner:1.00434
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9863000000000002
+Out Sample: Manual:1.1409 Learner:0.9566
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.3227799999999998
+Out Sample: Manual:1.1409 Learner:1.0855000000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.19572
+Out Sample: Manual:1.1409 Learner:0.90684
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.25454
+Out Sample: Manual:1.1409 Learner:0.92722
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.0708
+Out Sample: Manual:1.1409 Learner:1.0975599999999999
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9631800000000001
+Out Sample: Manual:1.1409 Learner:0.88034
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.83764
+Out Sample: Manual:1.1409 Learner:1.0764799999999999
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.1693799999999999
+Out Sample: Manual:1.1409 Learner:1.01564
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.07242
+Out Sample: Manual:1.1409 Learner:1.0872
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9598000000000001
+Out Sample: Manual:1.1409 Learner:1.09412
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.0570599999999999
+Out Sample: Manual:1.1409 Learner:0.9877400000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0636999999999999
+Out Sample: Manual:1.1409 Learner:1.0857800000000002
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.0185000000000002
+Out Sample: Manual:1.1409 Learner:1.02188
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.9726600000000001
+Out Sample: Manual:1.1409 Learner:0.9626400000000002
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.04126
+Out Sample: Manual:1.1409 Learner:0.96492
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.6848399999999999
+Out Sample: Manual:1.1409 Learner:0.9594800000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.9992000000000001
+Out Sample: Manual:1.1409 Learner:0.97724
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.025
+Out Sample: Manual:1.1409 Learner:0.91018
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.02264
+Out Sample: Manual:1.1409 Learner:1.04838
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.0182
+Out Sample: Manual:1.1409 Learner:1.0441
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9935
+Out Sample: Manual:1.1409 Learner:1.05492
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.04526
+Out Sample: Manual:1.1409 Learner:0.9846199999999998
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.0221399999999998
+Out Sample: Manual:1.1409 Learner:0.9911400000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.01408
+Out Sample: Manual:1.1409 Learner:0.9819800000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9197799999999999
+Out Sample: Manual:1.1409 Learner:0.981
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.95014
+Out Sample: Manual:1.1409 Learner:1.02984
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.9498800000000001
+Out Sample: Manual:1.1409 Learner:1.0376400000000001
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.01478
+Out Sample: Manual:1.1409 Learner:1.0377999999999998
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.8978200000000001
+Out Sample: Manual:1.1409 Learner:0.95988
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.8546600000000001
+Out Sample: Manual:1.1409 Learner:0.95888
+
+Hyper Params: alpha=3 gamma=0.7 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.80354
+Out Sample: Manual:1.1409 Learner:0.87588
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.41374
+Out Sample: Manual:1.1409 Learner:1.0966
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.45174
+Out Sample: Manual:1.1409 Learner:1.02894
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.1222400000000001
+Out Sample: Manual:1.1409 Learner:0.9557599999999999
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.28362
+Out Sample: Manual:1.1409 Learner:0.9907600000000001
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0369
+Out Sample: Manual:1.1409 Learner:0.99064
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.98216
+Out Sample: Manual:1.1409 Learner:1.06324
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.45372
+Out Sample: Manual:1.1409 Learner:0.9773799999999999
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.33014
+Out Sample: Manual:1.1409 Learner:1.09816
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.2406
+Out Sample: Manual:1.1409 Learner:1.0486600000000001
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.8574
+Out Sample: Manual:1.1409 Learner:1.11626
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.1074000000000002
+Out Sample: Manual:1.1409 Learner:1.00138
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.07816
+Out Sample: Manual:1.1409 Learner:0.9628000000000001
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.3891
+Out Sample: Manual:1.1409 Learner:1.02324
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.265
+Out Sample: Manual:1.1409 Learner:0.99606
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9767399999999999
+Out Sample: Manual:1.1409 Learner:0.98006
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.04606
+Out Sample: Manual:1.1409 Learner:0.8986399999999999
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.9951399999999999
+Out Sample: Manual:1.1409 Learner:0.91374
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.84416
+Out Sample: Manual:1.1409 Learner:1.02324
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.41194
+Out Sample: Manual:1.1409 Learner:1.02298
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.2055
+Out Sample: Manual:1.1409 Learner:1.06448
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.89334
+Out Sample: Manual:1.1409 Learner:0.9716
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.95714
+Out Sample: Manual:1.1409 Learner:0.98904
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.16854
+Out Sample: Manual:1.1409 Learner:0.8983399999999999
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.06684
+Out Sample: Manual:1.1409 Learner:1.01766
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.3417000000000001
+Out Sample: Manual:1.1409 Learner:1.11566
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.2086
+Out Sample: Manual:1.1409 Learner:0.94506
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.09024
+Out Sample: Manual:1.1409 Learner:1.03268
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.22774
+Out Sample: Manual:1.1409 Learner:0.98058
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.89946
+Out Sample: Manual:1.1409 Learner:1.13748
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.78174
+Out Sample: Manual:1.1409 Learner:0.9256399999999999
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.2359999999999998
+Out Sample: Manual:1.1409 Learner:0.9660200000000001
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.26724
+Out Sample: Manual:1.1409 Learner:0.9636
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.05094
+Out Sample: Manual:1.1409 Learner:1.00942
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.98334
+Out Sample: Manual:1.1409 Learner:0.92158
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0236399999999999
+Out Sample: Manual:1.1409 Learner:0.98498
+
+Hyper Params: alpha=3 gamma=0.6 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.93672
+Out Sample: Manual:1.1409 Learner:1.07884
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.12704
+Out Sample: Manual:1.1409 Learner:0.99858
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.01888
+Out Sample: Manual:1.1409 Learner:0.9169
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.85756
+Out Sample: Manual:1.1409 Learner:1.0227600000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.8042999999999999
+Out Sample: Manual:1.1409 Learner:1.0320799999999999
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.03826
+Out Sample: Manual:1.1409 Learner:0.99562
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.04806
+Out Sample: Manual:1.1409 Learner:1.02924
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.9434
+Out Sample: Manual:1.1409 Learner:0.95558
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.8881399999999999
+Out Sample: Manual:1.1409 Learner:0.9554400000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.00618
+Out Sample: Manual:1.1409 Learner:1.02602
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.9696600000000001
+Out Sample: Manual:1.1409 Learner:1.01372
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.20308
+Out Sample: Manual:1.1409 Learner:1.034
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.02468
+Out Sample: Manual:1.1409 Learner:0.9992800000000002
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.06934
+Out Sample: Manual:1.1409 Learner:1.07944
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.8435599999999999
+Out Sample: Manual:1.1409 Learner:1.05158
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.726
+Out Sample: Manual:1.1409 Learner:0.9862399999999999
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.9735400000000001
+Out Sample: Manual:1.1409 Learner:0.9604
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.7987200000000001
+Out Sample: Manual:1.1409 Learner:1.03892
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.1566400000000001
+Out Sample: Manual:1.1409 Learner:0.9727
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.035
+Out Sample: Manual:1.1409 Learner:1.02376
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.81228
+Out Sample: Manual:1.1409 Learner:0.8517399999999999
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.93314
+Out Sample: Manual:1.1409 Learner:0.90296
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.88412
+Out Sample: Manual:1.1409 Learner:1.0154400000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:0.66474
+Out Sample: Manual:1.1409 Learner:1.03698
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.0737999999999999
+Out Sample: Manual:1.1409 Learner:0.9505000000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:0.9795999999999999
+Out Sample: Manual:1.1409 Learner:0.9966
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:0.81568
+Out Sample: Manual:1.1409 Learner:1.09214
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.0729
+Out Sample: Manual:1.1409 Learner:1.0661
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.7887799999999999
+Out Sample: Manual:1.1409 Learner:1.0273400000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.0323200000000001
+Out Sample: Manual:1.1409 Learner:0.9826000000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.9634799999999999
+Out Sample: Manual:1.1409 Learner:0.95344
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.21674
+Out Sample: Manual:1.1409 Learner:1.10538
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.1232600000000001
+Out Sample: Manual:1.1409 Learner:1.02444
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:0.9076599999999999
+Out Sample: Manual:1.1409 Learner:1.04664
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:0.94936
+Out Sample: Manual:1.1409 Learner:0.9843400000000001
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.09456
+Out Sample: Manual:1.1409 Learner:0.94938
+
+Hyper Params: alpha=3 gamma=0.5 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:0.68308
+Out Sample: Manual:1.1409 Learner:1.024
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.69752
+Out Sample: Manual:1.1409 Learner:0.9652400000000001
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.80194
+Out Sample: Manual:1.1409 Learner:0.95994
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.72844
+Out Sample: Manual:1.1409 Learner:0.99554
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.79806
+Out Sample: Manual:1.1409 Learner:0.99584
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8232
+Out Sample: Manual:1.1409 Learner:0.9882199999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:2.0058
+Out Sample: Manual:1.1409 Learner:0.97992
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.68404
+Out Sample: Manual:1.1409 Learner:0.92812
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.72222
+Out Sample: Manual:1.1409 Learner:0.9446399999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.6864999999999999
+Out Sample: Manual:1.1409 Learner:1.0216
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.74552
+Out Sample: Manual:1.1409 Learner:1.0640200000000002
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.75748
+Out Sample: Manual:1.1409 Learner:0.9397
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.88836
+Out Sample: Manual:1.1409 Learner:1.06766
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.78472
+Out Sample: Manual:1.1409 Learner:0.99176
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.733
+Out Sample: Manual:1.1409 Learner:1.02028
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.7302
+Out Sample: Manual:1.1409 Learner:1.00964
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7456200000000002
+Out Sample: Manual:1.1409 Learner:1.00056
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8211
+Out Sample: Manual:1.1409 Learner:1.02132
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.87046
+Out Sample: Manual:1.1409 Learner:0.9797399999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.7225799999999998
+Out Sample: Manual:1.1409 Learner:0.93532
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.7310599999999998
+Out Sample: Manual:1.1409 Learner:0.9634
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.70304
+Out Sample: Manual:1.1409 Learner:1.02332
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7865399999999998
+Out Sample: Manual:1.1409 Learner:1.0659399999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.79744
+Out Sample: Manual:1.1409 Learner:0.99536
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.90252
+Out Sample: Manual:1.1409 Learner:0.9738
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.6681599999999999
+Out Sample: Manual:1.1409 Learner:0.9254800000000001
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.77502
+Out Sample: Manual:1.1409 Learner:1.08396
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.6261
+Out Sample: Manual:1.1409 Learner:1.03722
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7077400000000003
+Out Sample: Manual:1.1409 Learner:0.9799
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.88618
+Out Sample: Manual:1.1409 Learner:0.9419599999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9344200000000003
+Out Sample: Manual:1.1409 Learner:0.94994
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.7183800000000002
+Out Sample: Manual:1.1409 Learner:1.0236
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.7816200000000002
+Out Sample: Manual:1.1409 Learner:0.98096
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.62454
+Out Sample: Manual:1.1409 Learner:1.0338399999999999
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.6767400000000001
+Out Sample: Manual:1.1409 Learner:0.9336800000000001
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.681
+Out Sample: Manual:1.1409 Learner:1.0610399999999998
+
+Hyper Params: alpha=1 gamma=0.99 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:2.0200400000000003
+Out Sample: Manual:1.1409 Learner:1.02868
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:2.0185400000000002
+Out Sample: Manual:1.1409 Learner:1.0041
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:2.0146800000000002
+Out Sample: Manual:1.1409 Learner:1.0534199999999998
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.90318
+Out Sample: Manual:1.1409 Learner:0.9933599999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.73074
+Out Sample: Manual:1.1409 Learner:0.94772
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8544400000000003
+Out Sample: Manual:1.1409 Learner:1.08466
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.85096
+Out Sample: Manual:1.1409 Learner:0.92198
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.92286
+Out Sample: Manual:1.1409 Learner:1.04364
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:2.04672
+Out Sample: Manual:1.1409 Learner:1.0211999999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.7081799999999998
+Out Sample: Manual:1.1409 Learner:0.98518
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7092799999999997
+Out Sample: Manual:1.1409 Learner:0.9245000000000001
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8765800000000001
+Out Sample: Manual:1.1409 Learner:0.95008
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9366599999999998
+Out Sample: Manual:1.1409 Learner:1.00758
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.89834
+Out Sample: Manual:1.1409 Learner:0.96298
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.8117
+Out Sample: Manual:1.1409 Learner:1.0045199999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8062399999999998
+Out Sample: Manual:1.1409 Learner:0.9432
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.95196
+Out Sample: Manual:1.1409 Learner:0.9511399999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.9191799999999999
+Out Sample: Manual:1.1409 Learner:1.04618
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.97934
+Out Sample: Manual:1.1409 Learner:0.9429599999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.94862
+Out Sample: Manual:1.1409 Learner:0.9677800000000001
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:2.10434
+Out Sample: Manual:1.1409 Learner:1.0313999999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.9144
+Out Sample: Manual:1.1409 Learner:0.92534
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7919999999999998
+Out Sample: Manual:1.1409 Learner:0.8601999999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.7917199999999998
+Out Sample: Manual:1.1409 Learner:0.9785599999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9703400000000002
+Out Sample: Manual:1.1409 Learner:0.93672
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.83776
+Out Sample: Manual:1.1409 Learner:0.9755799999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.91364
+Out Sample: Manual:1.1409 Learner:1.02622
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.80756
+Out Sample: Manual:1.1409 Learner:0.85138
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7859
+Out Sample: Manual:1.1409 Learner:0.918
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.88502
+Out Sample: Manual:1.1409 Learner:0.9496
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.99652
+Out Sample: Manual:1.1409 Learner:0.8945799999999999
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.8174
+Out Sample: Manual:1.1409 Learner:0.94078
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.8709799999999999
+Out Sample: Manual:1.1409 Learner:0.91794
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.77012
+Out Sample: Manual:1.1409 Learner:0.92862
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.8236399999999997
+Out Sample: Manual:1.1409 Learner:0.91368
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.9075199999999999
+Out Sample: Manual:1.1409 Learner:0.99988
+
+Hyper Params: alpha=1 gamma=0.9 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:2.0803
+Out Sample: Manual:1.1409 Learner:0.9595
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.84368
+Out Sample: Manual:1.1409 Learner:1.01412
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.7347
+Out Sample: Manual:1.1409 Learner:0.97322
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.7090200000000002
+Out Sample: Manual:1.1409 Learner:1.00916
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.69442
+Out Sample: Manual:1.1409 Learner:1.0009
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8557000000000001
+Out Sample: Manual:1.1409 Learner:0.9597600000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.8321399999999999
+Out Sample: Manual:1.1409 Learner:1.0081
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.7836599999999998
+Out Sample: Manual:1.1409 Learner:0.99818
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.82768
+Out Sample: Manual:1.1409 Learner:0.9642199999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.79738
+Out Sample: Manual:1.1409 Learner:1.00096
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.6231799999999998
+Out Sample: Manual:1.1409 Learner:0.9642999999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8387200000000001
+Out Sample: Manual:1.1409 Learner:1.02438
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:2.05418
+Out Sample: Manual:1.1409 Learner:0.8776600000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.77028
+Out Sample: Manual:1.1409 Learner:0.98616
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.7675800000000002
+Out Sample: Manual:1.1409 Learner:0.94852
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.79878
+Out Sample: Manual:1.1409 Learner:1.0078799999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.72306
+Out Sample: Manual:1.1409 Learner:0.98104
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.96638
+Out Sample: Manual:1.1409 Learner:0.94682
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.8972799999999999
+Out Sample: Manual:1.1409 Learner:0.9807199999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.8436800000000002
+Out Sample: Manual:1.1409 Learner:1.0141200000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.72756
+Out Sample: Manual:1.1409 Learner:0.97268
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8369800000000003
+Out Sample: Manual:1.1409 Learner:1.0132400000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.62488
+Out Sample: Manual:1.1409 Learner:0.9698599999999998
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.78702
+Out Sample: Manual:1.1409 Learner:0.94476
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9688799999999997
+Out Sample: Manual:1.1409 Learner:0.99948
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.7659999999999998
+Out Sample: Manual:1.1409 Learner:0.9898399999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.6983
+Out Sample: Manual:1.1409 Learner:0.9892799999999999
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.7412
+Out Sample: Manual:1.1409 Learner:0.9329600000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.7642799999999998
+Out Sample: Manual:1.1409 Learner:0.9677800000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.91526
+Out Sample: Manual:1.1409 Learner:1.0668600000000001
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.99 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:2.00878
+Out Sample: Manual:1.1409 Learner:0.96142
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.7812799999999998
+Out Sample: Manual:1.1409 Learner:0.9363
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.7575600000000002
+Out Sample: Manual:1.1409 Learner:0.94818
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.84294
+Out Sample: Manual:1.1409 Learner:0.91882
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.67834
+Out Sample: Manual:1.1409 Learner:0.99582
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8288000000000002
+Out Sample: Manual:1.1409 Learner:0.95584
+
+Hyper Params: alpha=1 gamma=0.8 rar=0.999 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.91866
+Out Sample: Manual:1.1409 Learner:0.98356
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.81646
+Out Sample: Manual:1.1409 Learner:0.9324600000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.8496
+Out Sample: Manual:1.1409 Learner:0.90192
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8202599999999998
+Out Sample: Manual:1.1409 Learner:1.03772
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.89984
+Out Sample: Manual:1.1409 Learner:0.98828
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.81678
+Out Sample: Manual:1.1409 Learner:0.9760000000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.6 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.87162
+Out Sample: Manual:1.1409 Learner:1.00124
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.82036
+Out Sample: Manual:1.1409 Learner:1.02086
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.8394599999999999
+Out Sample: Manual:1.1409 Learner:0.9037
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8845399999999999
+Out Sample: Manual:1.1409 Learner:0.9898600000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.8416799999999998
+Out Sample: Manual:1.1409 Learner:0.9544800000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.6992000000000003
+Out Sample: Manual:1.1409 Learner:0.9792799999999999
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.7 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9059800000000002
+Out Sample: Manual:1.1409 Learner:1.03286
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.8133399999999997
+Out Sample: Manual:1.1409 Learner:0.96296
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.81898
+Out Sample: Manual:1.1409 Learner:0.93098
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8435199999999998
+Out Sample: Manual:1.1409 Learner:0.9753000000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.8453400000000002
+Out Sample: Manual:1.1409 Learner:1.009
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.9773
+Out Sample: Manual:1.1409 Learner:0.9752799999999999
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.8 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.97276
+Out Sample: Manual:1.1409 Learner:0.99438
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.8504
+Out Sample: Manual:1.1409 Learner:0.89588
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.8208400000000002
+Out Sample: Manual:1.1409 Learner:0.97428
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.83072
+Out Sample: Manual:1.1409 Learner:0.9670000000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.8110600000000001
+Out Sample: Manual:1.1409 Learner:1.0888200000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.8339600000000003
+Out Sample: Manual:1.1409 Learner:0.9448799999999999
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.9 radr=0.999
+In Sample: Manual:1.3894000000000002 Learner:1.9202000000000001
+Out Sample: Manual:1.1409 Learner:1.01108
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.99 radr=0.6
+In Sample: Manual:1.3894000000000002 Learner:1.84058
+Out Sample: Manual:1.1409 Learner:0.89058
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.99 radr=0.7
+In Sample: Manual:1.3894000000000002 Learner:1.81514
+Out Sample: Manual:1.1409 Learner:0.9349400000000001
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.99 radr=0.8
+In Sample: Manual:1.3894000000000002 Learner:1.8270599999999995
+Out Sample: Manual:1.1409 Learner:0.98588
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.99 radr=0.9
+In Sample: Manual:1.3894000000000002 Learner:1.82322
+Out Sample: Manual:1.1409 Learner:0.94256
+
+Hyper Params: alpha=1 gamma=0.7 rar=0.99 radr=0.99
+In Sample: Manual:1.3894000000000002 Learner:1.81798
+Out Sample: Manual:1.1409 Learner:0.9812
+
