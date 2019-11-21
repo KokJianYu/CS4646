@@ -34,25 +34,12 @@ import random
 from indicators import MomentumIndicator, BollingerBandIndicator, StochasticIndicator 			  	 		  		  		    	 		 		   		 		  
 from QLearner import QLearner
 
-# For profiling. TODO: Remove before submission
-import time
-# t0 = time.clock()
-# t1 = time.clock()
-
-# total = t1-t0
-
 class StrategyLearner(object):  		   	  			  	 		  		  		    	 		 		   		 		  
                                                                                                                   
     # constructor  		   	  			  	 		  		  		    	 		 		   		 		  
     def __init__(self, verbose = False, impact=0.0):  		   	  			  	 		  		  		    	 		 		   		 		  
         self.verbose = verbose  		   	  			  	 		  		  		    	 		 		   		 		  
         self.impact = impact  		   	  			  	 		  		  		    	 		 		   		 		  
-
-    def set_hyper_params(self, alpha=0.001, gamma=0.9, rar=0.99, radr=0.999):
-        self.alpha = alpha
-        self.gamma = gamma
-        self.rar = rar
-        self.radr = radr
 
 
     # this method should create a QLearner, and train it for trading  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -71,44 +58,38 @@ class StrategyLearner(object):
         indicator_s = StochasticIndicator(data, 14).calculate_helper_data()
         
         # Get bins
-        self.bin_momentum = pd.qcut(indicator_m.iloc[:,1], 5, retbins=True, duplicates="drop")[1]
-        self.bin_bollinger = pd.qcut(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], 5, retbins=True, duplicates="drop")[1]
-        self.bin_stochastic = pd.qcut(indicator_s.iloc[:,1], 5, retbins=True, duplicates="drop")[1]
-        self.bin_price = pd.qcut(data.iloc[:,0].diff(periods=1), 4, retbins=True, duplicates="drop")[1]
-
+        self.bin_momentum = pd.qcut(indicator_m.iloc[:,1], 4, retbins=True, duplicates="drop")[1]
+        self.bin_bollinger = pd.qcut(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], 4, retbins=True, duplicates="drop")[1]
+        self.bin_stochastic = pd.qcut(indicator_s.iloc[:,1], 4, retbins=True, duplicates="drop")[1]
+        self.bin_price = pd.qcut(data.iloc[:,0].diff(periods=1), 3, retbins=True, duplicates="drop")[1]
+        price_diff = data.iloc[:,0].diff()
         momentums = np.digitize(indicator_m.iloc[:,1], self.bin_momentum)
         bb_diffs = np.digitize(indicator_bb.iloc[:,1] - indicator_bb.iloc[:,3], self.bin_bollinger)
         stochastics = np.digitize(indicator_s.iloc[:,1], self.bin_stochastic)
-        price_features = np.digitize(data.iloc[:,0].diff(), self.bin_price)
+        price_features = np.digitize(price_diff, self.bin_price)
+
+        # Set first 20 input to -1 as the algo requires 20 days to get started due to rolling window for bollinger band.
+        momentums[:20] = -1
+        bb_diffs[:20] = -1
+        stochastics[:20] = -1
+        price_features[:20] = -1
         # initialize learner
         num_states = self.getTotalNumberOfStates()
         self.learner = QLearner(num_states=num_states, \
                             num_actions = 3, \
-                            alpha = 0.02, \
+                            alpha = 0.05, \
                             gamma = 0.9, \
                             rar = 0.99, \
                             radr = 0.999, \
                             dyna = 0, \
                             verbose = False)
-        # self.learner = QLearner(num_states=num_states, \
-        #             num_actions = 3, \
-        #             alpha = self.alpha, \
-        #             gamma = self.gamma, \
-        #             rar = self.rar, \
-        #             radr = self.radr, \
-        #             dyna = 0, \
-        #             verbose = False)
 
         # loop day by day
         # create variables for loop
         date_list = data.index 
         iter = 0
-        max_iter = 30
-        prev_ret = float("-inf")
-        d = data.iloc[:,0]
+        max_iter = 25
         while iter <= max_iter:
-            print(f"iter:{iter}")
-
             portfolio = pd.DataFrame(np.zeros((len(date_list), 1)), index = date_list)
             stock_shares = 0
             balance = sv
@@ -159,8 +140,8 @@ class StrategyLearner(object):
                     # Minus commission
                     if order_num_of_shares != 0:
                         balance -= commission
-                    # Minus impact
-                    balance -= order_num_of_shares * current_symbol_price * self.impact
+                        # Minus impact
+                        balance -= abs(order_num_of_shares) * current_symbol_price * self.impact
 
                 # Update portfolio with balance and current stock worth
                 stock_value = data.loc[current_strtime].iloc[0] * stock_shares
@@ -168,53 +149,14 @@ class StrategyLearner(object):
 
                 portfolio.loc[current_strtime] = total_value
 
-
-                
-            current_ret = (portfolio.iloc[-1] / portfolio.iloc[0]).iloc[0]
-            print(current_ret)
-            # TODO: Add logic to stop training if current_ret not increasing.
-            # if abs(prev_ret - (current_ret)) < 1e-3 and self.learner.epsilon < 0.05:
-                # break
-                # self.best_q_table = self.learner.q_table.copy()
-                # print("save best")
-
-            prev_ret = current_ret
-            iter += 1	  		
-        #self.learner.q_table = self.best_q_table
-        # # example usage of the old backward compatible util function  		   	  			  	 		  		  		    	 		 		   		 		  
-        # syms=[symbol]  		   	  			  	 		  		  		    	 		 		   		 		  
-        # dates = pd.date_range(sd, ed)  		   	  			  	 		  		  		    	 		 		   		 		  
-        # prices_all = ut.get_data(syms, dates)  # automatically adds SPY  		   	  			  	 		  		  		    	 		 		   		 		  
-        # prices = prices_all[syms]  # only portfolio symbols  		   	  			  	 		  		  		    	 		 		   		 		  
-        # prices_SPY = prices_all['SPY']  # only SPY, for comparison later  		   	  			  	 		  		  		    	 		 		   		 		  
-        # if self.verbose: print(prices)  		   	  			  	 		  		  		    	 		 		   		 		  
-                                                                                                                  
-        # # example use with new colname  		   	  			  	 		  		  		    	 		 		   		 		  
-        # volume_all = ut.get_data(syms, dates, colname = "Volume")  # automatically adds SPY  		   	  			  	 		  		  		    	 		 		   		 		  
-        # volume = volume_all[syms]  # only portfolio symbols  		   	  			  	 		  		  		    	 		 		   		 		  
-        # volume_SPY = volume_all['SPY']  # only SPY, for comparison later  		   	  			  	 		  		  		    	 		 		   		 		  
-        # if self.verbose: print(volume)  		   	  			  	 		  		  		    	 		 		   		 		  
+            # current_ret = (portfolio.iloc[-1] / portfolio.iloc[0]).iloc[0]
+            iter += 1	  			   	  			  	 		  		  		    	 		 		   		 		  
                                                                                                                   
     # this method should use the existing policy and test it against new data  		   	  			  	 		  		  		    	 		 		   		 		  
     def testPolicy(self, symbol = "IBM", \
         sd=dt.datetime(2009,1,1), \
         ed=dt.datetime(2010,1,1), \
-        sv = 10000):  		   	  			  	 		  		  		    	 		 		   		 		  
-                                                                                                                  
-        # here we build a fake set of trades  		   	  			  	 		  		  		    	 		 		   		 		  
-        # your code should return the same sort of data  		   	  			  	 		  		  		    	 		 		   		 		  
-        # dates = pd.date_range(sd, ed)  		   	  			  	 		  		  		    	 		 		   		 		  
-        # prices_all = ut.get_data([symbol], dates)  # automatically adds SPY  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades = prices_all[[symbol,]]  # only portfolio symbols  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades_SPY = prices_all['SPY']  # only SPY, for comparison later  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[:,:] = 0 # set them all to nothing  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[0,:] = 1000 # add a BUY at the start  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[40,:] = -1000 # add a SELL  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[41,:] = 1000 # add a BUY  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[60,:] = -2000 # go short from long  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[61,:] = 2000 # go long from short  		   	  			  	 		  		  		    	 		 		   		 		  
-        # trades.values[-1,:] = -1000 #exit on the last day  		   
-
+        sv = 10000):  		   	  			 
 
         data = self.getData(sd, ed, symbol)
 
@@ -228,10 +170,15 @@ class StrategyLearner(object):
         stochastics = np.digitize(indicator_s.iloc[:,1], self.bin_stochastic)
         price_features = np.digitize(data.iloc[:,0].diff(), self.bin_price)
 
+        # Set first 20 input to -1 as the algo requires 20 days to get started due to rolling window for bollinger band.
+        momentums[:20] = -1
+        bb_diffs[:20] = -1
+        stochastics[:20] = -1
+        price_features[:20] = -1
+
         trade_df = pd.DataFrame(index=data.index, columns=[symbol])
         current_holdings = 0
         action = 0
-        d = data.iloc[:, 0]
         for i in range(data.shape[0]):
             if i == 0:
                 price_feature = 0
@@ -260,7 +207,8 @@ class StrategyLearner(object):
         return trade_df
 
     def getTotalNumberOfStates(self):
-        return 1875
+        # + 1 is for the state when some values are not yet calculated
+        return 5*5*5*3*4 + 1
 
     # stochastic -> Value from 0-100
     # bollinger -> 3 Values. SMA + 2*STD, SMA and SMA - 2*STD
@@ -269,8 +217,8 @@ class StrategyLearner(object):
     # Col 0 is always adjusted close
     # Features starts from col 1
     def convertFeaturesToState(self, price, momentum, bollinger, stochastic, holding):  		   	  			  	 		  		  		    	 		 		   		 		  
-        if np.isnan(momentum) or np.isnan(bollinger) or np.isnan(stochastic) or momentum == len(self.bin_momentum) or bollinger == len(self.bin_bollinger) or stochastic == len(self.bin_stochastic):
-            return 0
+        if np.isnan(momentum) or np.isnan(bollinger) or np.isnan(stochastic) or momentum == -1 or bollinger == -1 or stochastic == -1 or price == -1:
+            return self.getTotalNumberOfStates() - 1
         
         # These values starts from 1. -1 to make it start from 0
         momentum -= 1
@@ -280,14 +228,11 @@ class StrategyLearner(object):
         # Holding starts from -1, +1 to make it start from 0
         holding += 1
         return momentum + stochastic*5 + bollinger*25 + holding*125 + price*375
-        #return momentum*150 + bb_1*25+ holding*5 + price
-        #print(price, momentum, bollinger, stochastic, holding)
-
     def calculateReward(self, total_value, prev_day_order):
         try :
             return_val = (total_value - self.prev_total_value)
             self.prev_total_value = total_value
-            return return_val - prev_day_order*self.impact
+            return return_val
         except AttributeError:
             self.prev_total_value = total_value
 
@@ -313,55 +258,11 @@ class StrategyLearner(object):
         return "Q Learning Strategy"
 
 
-# Code below to generate graphs
 def generate_graphs():
-    from marketsim import runSimulation
-    from ManualStrategy import ManualStrategy, BenchmarkStrategy
-    alpha = [3, 1, 0.3, 0.1, 0.01, 0.03 , 0.001, 0.003, 0.0001, 0.0003] 
-    gamma = [0.99, 0.9, 0.8, 0.7]
-    rar = [0.8, 0.9, 0.99, 0.999]
-    radr = [0.8, 0.9, 0.99, 0.999]
-    best_params_in = []
-    best_params_out = []
-    best_in = 0
-    best_out = 0
-    for a in alpha:
-        for g in gamma:
-            for r in rar:
-                for r2 in radr:
-                    avg_in_pv1 = 0
-                    avg_in_pv2 = 0
-                    avg_out_pv1 = 0
-                    avg_out_pv2 = 0
-                    for i in range(5):
-                        learner = StrategyLearner()
-                        learner.set_hyper_params(a, g, r, r2)
-                        train_learner(learner)
-                        in_pv1, in_pv2 = runSimulation(ManualStrategy(), learner, "manual_insample.png",True)
-                        out_pv1, out_pv2 = runSimulation(ManualStrategy(), learner, "manual_outofsample.png",True, False)
-                        avg_in_pv1 += in_pv1 / 5
-                        avg_in_pv2 += in_pv2 / 5
-                        avg_out_pv1 += out_pv1 / 5
-                        avg_out_pv2 += out_pv2 / 5
-
-                    with open("output.txt", "a+") as f:
-                        f.write(f"Hyper Params: alpha={a} gamma={g} rar={r} radr={r2}\n")
-                        f.write(f"In Sample: Manual:{avg_in_pv1} Learner:{avg_in_pv2}\n")
-                        f.write(f"Out Sample: Manual:{avg_out_pv1} Learner:{avg_out_pv2}\n")
-                        f.write(f"\n")
-                    if best_in < avg_in_pv2:
-                        best_in = avg_in_pv2
-                        best_params_in = [a, g, r, r2]
-                    if best_out < avg_out_pv2:
-                        best_out = avg_out_pv2
-                        best_params_out = [a, g, r, r2]
-    
-    print("Best Parameters:")
-    print("In Sample")
-    print(f"Alpha:{best_params_in[0]} Gamma:{best_params_in[1]} rar:{best_params_in[2]} radr:{best_params_in[3]}")
-    print("Out Sample")
-    print(f"Alpha:{best_params_out[0]} Gamma:{best_params_out[1]} rar:{best_params_out[2]} radr:{best_params_out[3]}")
-                        
+    import experiment1
+    import experiment2
+    experiment1.generate_graphs()
+    experiment2.generate_graphs()
 
 def train_learner(qlearner):
     symbol = "JPM"

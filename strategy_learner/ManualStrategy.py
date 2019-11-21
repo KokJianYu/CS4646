@@ -3,7 +3,7 @@ from util import get_data, plot_data
 import datetime as dt  	
 import pandas as pd 
 import matplotlib.pyplot as plt
-from marketsim import compute_portvals_df
+from marketsimcode import compute_portvals_df
 
 
 class Strategy():
@@ -127,7 +127,7 @@ def author():
     return "jkok7"
 
 def generate_graphs():
-    from marketsim import runSimulation
+    from marketsimcode import runSimulation
     runSimulation(ManualStrategy(), BenchmarkStrategy(), "manual_insample.png",True)
     runSimulation(ManualStrategy(), BenchmarkStrategy(), "manual_outofsample.png",True, False)
 
