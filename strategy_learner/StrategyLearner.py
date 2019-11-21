@@ -257,6 +257,11 @@ class StrategyLearner(object):
     def getStrategyName(self):
         return "Q Learning Strategy"
 
+    def author(self):
+        return "jkok7"
+
+def author():
+        return "jkok7"
 
 def generate_graphs():
     import experiment1

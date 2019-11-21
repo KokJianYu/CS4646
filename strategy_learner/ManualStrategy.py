@@ -13,6 +13,9 @@ class Strategy():
     def getStrategyName(self):
         return "Please give a strategy name"
 
+    def author(self):
+        return "jkok7"
+
 class TheoreticallyOptimalStrategy(Strategy):
     def testPolicy(self, symbol, sd, ed, sv):
         date_list = pd.date_range(sd, ed)
@@ -37,6 +40,9 @@ class TheoreticallyOptimalStrategy(Strategy):
     def getStrategyName(self):
         return "Theoretically Optimal Strategy"
 
+    def author(self):
+        return "jkok7"
+
 class BenchmarkStrategy(Strategy):
     def testPolicy(self, symbol, sd, ed, sv):
         date_list = pd.date_range(sd, ed)
@@ -48,6 +54,9 @@ class BenchmarkStrategy(Strategy):
 
     def getStrategyName(self):
         return "Benchmark Strategy"
+
+    def author(self):
+            return "jkok7"
 
 
 class ManualStrategy(Strategy):
@@ -122,6 +131,9 @@ class ManualStrategy(Strategy):
 
     def getStrategyName(self):
         return "Manual Strategy"
+
+    def author(self):
+        return "jkok7"
 
 def author():
     return "jkok7"
